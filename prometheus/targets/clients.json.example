@@ -1,0 +1,22 @@
+[
+  {
+    "targets": [
+      "https://example.com/",
+      "https://app.example.com/login"
+    ],
+    "labels": {
+      "company": "example-co",
+      "tier": "free"
+    }
+  },
+  {
+    "targets": [
+      "https://internal-tool.example.com/"
+    ],
+    "labels": {
+      "company": "example-co",
+      "tier": "free",
+      "module": "http_2xx_or_403"
+    }
+  }
+]

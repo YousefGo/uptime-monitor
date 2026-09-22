@@ -1,0 +1,18 @@
+groups:
+  - name: availability
+    rules:
+      - alert: SiteDown
+        expr: probe_success == 0
+        for: 15m
+        labels:
+          severity: critical
+        annotations:
+          summary: "{{ $labels.instance }} is DOWN"
+
+      - alert: SSLExpiringSoon
+        expr: (probe_ssl_earliest_cert_expiry - time()) / 86400 < 21
+        for: 1h
+        labels:
+          severity: warning
+        annotations:
+          summary: "SSL for {{ $labels.instance }} expires soon"

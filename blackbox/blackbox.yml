@@ -1,0 +1,21 @@
+modules:
+  http_2xx:
+    prober: http
+    timeout: 10s
+    http:
+      method: GET
+      valid_status_codes: [200, 301, 302]
+      follow_redirects: true
+      preferred_ip_protocol: ip4
+      ip_protocol_fallback: false
+
+  http_2xx_or_403:
+    prober: http
+    timeout: 10s
+    http:
+      method: GET
+      valid_status_codes: [200, 301, 302, 403]
+      follow_redirects: true
+      preferred_ip_protocol: ip4
+      ip_protocol_fallback: false
+      
