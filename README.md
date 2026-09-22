@@ -1,8 +1,8 @@
-# mointer
+# mointer — self-hosted website uptime & SSL monitoring
 
-Lightweight uptime & SSL monitoring for a handful of websites, with instant Telegram alerts — no SaaS, no agents, just Docker Compose.
+A self-hosted **server monitoring** stack for tracking **website uptime** and **SSL certificate expiry**, with instant **Telegram alerts** when something goes down. No SaaS subscription, no agents to install — just Docker Compose and four well-known open-source tools.
 
-**Stack:** Prometheus · Blackbox Exporter · Alertmanager · Grafana
+**Stack:** [Prometheus](https://prometheus.io) · [Blackbox Exporter](https://github.com/prometheus/blackbox_exporter) · [Alertmanager](https://github.com/prometheus/alertmanager) · [Grafana](https://grafana.com)
 
 ## What it does
 
